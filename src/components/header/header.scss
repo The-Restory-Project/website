@@ -1,0 +1,32 @@
+//Importing Style Guides, to modify go-to _style-guides.scss
+@import "./../../styles/_style-guides.scss";
+
+header {
+  height: 80px;
+  width: 100%;
+  .inner-header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    height: 80px;
+    .logo {
+      a {
+        font: $font-head;
+        text-decoration: none;
+        font-weight: 600;
+        padding-left: 1rem;
+        padding-right: 1rem;
+      }
+    }
+    .navigation {
+      nav {
+        a {
+          font: $font-head;
+          text-decoration: none;
+          padding-left: 1rem;
+          padding-right: 1rem;
+        }
+      }
+    }
+  }
+}

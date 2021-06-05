@@ -1,0 +1,23 @@
+//Importing Style Guides, to modify go-to _style-guides.scss
+@import "./../../styles/_style-guides.scss";
+
+footer {
+  height: 10%;
+  width: 100%;
+
+  .inner-footer {
+    display: flex;
+    justify-content: flex-end;
+    p {
+      font: 120% $font-body;
+      color: $secondary-color;
+      line-height: 1.4;
+    }
+    a {
+      font: $font-body;
+      color: $primary-color;
+      line-height: 1.4;
+      text-decoration: none;
+    }
+  }
+}
