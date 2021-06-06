@@ -5,7 +5,7 @@ const today = new Date();
 
 const Footer = () => (
   <footer>
-    <div className="container container-fluid">
+    <div className="inner-footer">
       {/* prettier-ignore */}
       <p>Built with coffee. Copyright{" "}<a href="https://aerocreate.com/">Aero Create</a> © {today.getFullYear()}.</p>
     </div>

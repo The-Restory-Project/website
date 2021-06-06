@@ -2,29 +2,33 @@
 @import "./../../styles/_style-guides.scss";
 
 header {
-  height: 80px;
+  height: 10%;
   width: 100%;
   .inner-header {
     display: flex;
     align-items: center;
     justify-content: space-between;
     height: 80px;
+    padding-left: 12rem;
+    padding-right: 12rem;
+    margin-bottom: 4rem;
     .logo {
       a {
-        font: $font-head;
+        font: 120% $font-body;
+        color: $primary-color;
         text-decoration: none;
         font-weight: 600;
-        padding-left: 1rem;
-        padding-right: 1rem;
+        padding-right: 2rem;
       }
     }
     .navigation {
       nav {
         a {
-          font: $font-head;
+          font: 100% $font-body;
+          color: $primary-color;
           text-decoration: none;
-          padding-left: 1rem;
-          padding-right: 1rem;
+          font-weight: 600;
+          padding-left: 2rem;
         }
       }
     }

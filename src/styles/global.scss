@@ -2,12 +2,37 @@
 @import "./_style-guides.scss";
 
 //Base CSS starts here
+html,
+body {
+  margin: 0;
+  padding: 0;
+}
+
 h1 {
   font: 200% $font-head;
-  color: $secondary-color;
+  letter-spacing: -1px;
+  color: $primary-color;
 }
 
 p {
   font: 100% $font-body;
   color: $secondary-color;
+}
+
+li {
+  font: 100% $font-body;
+  color: $secondary-color;
+}
+
+//Custom classes start here
+
+.equal-spacing {
+  display: flex;
+  align-items: space-between;
+  justify-content: flex-end;
+}
+
+.row {
+  padding-top: 4rem;
+  padding-bottom: 4rem;
 }

@@ -7,11 +7,17 @@ footer {
 
   .inner-footer {
     display: flex;
+    align-items: flex-end;
     justify-content: flex-end;
+    height: 80px;
+    padding-left: 12rem;
+    padding-right: 12rem;
     p {
-      font: 120% $font-body;
+      font: 100% $font-body;
       color: $secondary-color;
       line-height: 1.4;
+      padding-left: 2rem;
+      padding-right: 2rem;
     }
     a {
       font: $font-body;
