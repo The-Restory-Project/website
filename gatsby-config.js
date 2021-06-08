@@ -49,12 +49,9 @@ module.exports = {
     {
       resolve: `gatsby-plugin-google-fonts`,
       options: {
-          fonts: [
-            `montserrat`,
-            `opensans`
-          ],
-        display: 'swap'
-      }
+        fonts: [`spectral`, `opensans`],
+        display: "swap",
+      },
     },
     `gatsby-plugin-sass`,
     `gatsby-plugin-react-helmet`,
@@ -62,4 +59,4 @@ module.exports = {
     `gatsby-plugin-sharp`,
     `gatsby-transformer-sharp`,
   ],
-}
+};
