@@ -7,7 +7,39 @@
 module.exports = {
   /* Your site config here */
   siteMetadata: {
-    siteUrl: `https://www.example.com`,
+    title: "The Restory Project",
+    siteUrl: `https://www.therestoryproject.in`,
+    description: `Changing the stories we tell about ourselves`,
+    menuLinks: [
+      {
+        name: "home",
+        link: "/",
+      },
+      {
+        name: "about",
+        link: "/about",
+      },
+      {
+        name: "book",
+        link: "/book",
+      },
+      {
+        name: "shop",
+        link: "/shop",
+      },
+      {
+        name: "resources",
+        link: "/resources",
+      },
+      {
+        name: "collaborations",
+        link: "/collaborations",
+      },
+      {
+        name: "contact",
+        link: "/contact",
+      },
+    ],
   },
   plugins: [
     {

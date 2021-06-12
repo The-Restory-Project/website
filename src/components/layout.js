@@ -1,14 +1,17 @@
 import * as React from "react";
 import Header from "./header/header.js";
 import Footer from "./footer/footer.js";
-import layoutStyle from "./layout.module.scss";
 
-export default function Layout({ children }) {
+import { container, section } from "./layout-center.module.scss";
+
+const Layout = ({ children }) => {
   return (
-    <div className={layoutStyle.container}>
+    <div className={container}>
       <Header />
-      <div className={layoutStyle.section}>{children}</div>
+      <div className={section}>{children}</div>
       <Footer />
     </div>
   );
-}
+};
+
+export default Layout;
