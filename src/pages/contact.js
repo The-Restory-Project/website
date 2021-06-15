@@ -1,8 +1,12 @@
 import * as React from "react";
+import { Helmet } from "react-helmet";
 import Layout from "../components/layout-center";
 
 const Contact = () => (
   <Layout>
+    <Helmet>
+      <title>The Restory Project | Contact</title>
+    </Helmet>
     <div className="row">
       <div className="col-md">
         <h1>Contact us</h1>

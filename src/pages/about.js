@@ -1,8 +1,12 @@
 import * as React from "react";
+import { Helmet } from "react-helmet";
 import Layout from "../components/layout";
 
 const About = () => (
   <Layout>
+  <Helmet>
+    <title>The Restory Project | About us</title>
+  </Helmet>
     <div className="container-fluid">
       <div className="row padding-vertical">
         <div className="col-sm-6">

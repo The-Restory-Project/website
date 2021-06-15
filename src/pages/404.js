@@ -1,9 +1,13 @@
 import * as React from "react";
+import { Helmet } from "react-helmet";
 import Layout from "../components/layout-center";
 
 const NotFoundPage = () => {
   return (
     <Layout>
+    <Helmet>
+      <title>The Restory Project | Page Not Found</title>
+    </Helmet>
       <div className="row">
         <div className="col-md">
           <h1>404: Page Not Found!</h1>

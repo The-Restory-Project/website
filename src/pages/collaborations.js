@@ -1,8 +1,12 @@
 import * as React from "react";
+import { Helmet } from "react-helmet";
 import Layout from "../components/layout";
 
 const Collaborations = () => (
   <Layout>
+  <Helmet>
+    <title>The Restory Project | Collaborations</title>
+  </Helmet>
     <div className="container-fluid">
       <h1>Collaborations</h1>
 
