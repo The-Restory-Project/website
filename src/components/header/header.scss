@@ -25,13 +25,21 @@ header {
     }
     .navigation {
       nav {
-        a {
-          font: 120% $font-body;
-          color: $primary-color;
-          text-decoration: none;
-          font-weight: 600;
-          padding-left: 2rem;
-          display: inline-block;
+        ul {
+          display: flex;
+          flex: 1;
+          li {
+            list-style: none;
+            padding: 1rem;
+            a {
+              font: 100% $font-body;
+              color: $primary-color;
+              text-decoration: none;
+              font-weight: 600;
+              padding-left: 2rem;
+              display: inline-block;
+            }
+          }
         }
       }
     }

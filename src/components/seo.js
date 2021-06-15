@@ -1,3 +1,5 @@
+/*
+
 import React from "react";
 import PropTypes from "prop-types";
 import { Helmet } from "react-helmet";
@@ -7,23 +9,26 @@ import { useStaticQuery, graphql } from "gatsby";
 const SEO = ({ title, description, image, article }) => {
   const { pathname } = useLocation();
   const { site } = useStaticQuery(query);
+  const { defaultTitle, defaultDescription, defaultUrl } = site.siteMetadata;
 
-  return null;
+  const seo = {
+    title: title || defaultTitle,
+    description: description || defaultDescription,
+    siteUrl: `${defaultUrl}${pathname}`,
+  };
+
+  return (
+    <Helmet title={seo.title}>
+      <meta name="description" content={seo.description} />
+      {seo.siteUrl && <meta property="og:url" content={seo.url} />}
+      {seo.descrption && (
+        <meta property="og:description" content={seo.descrption} />
+      )}
+    </Helmet>
+  );
 };
 
 export default SEO;
-
-const query = graphql`
-  query SEO {
-    site {
-      siteMetadata {
-        defaultTitle: title
-        defaultDescription: description
-        defaultUrl: siteUrl
-      }
-    }
-  }
-`;
 
 SEO.propTypes = {
   title: PropTypes.string,
@@ -38,3 +43,18 @@ SEO.defaultProps = {
   image: null,
   article: false,
 };
+
+const query = graphql`
+  query SEO {
+    site {
+      siteMetadata {
+        defaultTitle: title
+        defaultDescription: description
+        defaultUrl: siteUrl
+      }
+    }
+  }
+`;
+
+
+*/

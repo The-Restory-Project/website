@@ -8,35 +8,36 @@ module.exports = {
   /* Your site config here */
   siteMetadata: {
     title: "The Restory Project",
-    siteUrl: `https://www.therestoryproject.in`,
     description: `Changing the stories we tell about ourselves`,
+    author: `Aero Create`,
+    siteUrl: `https://www.therestoryproject.in`,
     menuLinks: [
       {
-        name: "home",
+        name: "Home",
         link: "/",
       },
       {
-        name: "about",
+        name: "About us",
         link: "/about",
       },
       {
-        name: "book",
+        name: "Book",
         link: "/book",
       },
       {
-        name: "shop",
+        name: "Shop",
         link: "/shop",
       },
       {
-        name: "resources",
+        name: "Resources",
         link: "/resources",
       },
       {
-        name: "collaborations",
+        name: "Collaborations",
         link: "/collaborations",
       },
       {
-        name: "contact",
+        name: "Contact",
         link: "/contact",
       },
     ],

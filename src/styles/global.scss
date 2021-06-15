@@ -6,28 +6,27 @@ html,
 body {
   margin: 0;
   padding: 0;
+  box-sizing: border-box;
 }
 
 h1 {
   font: 280% $font-head;
   letter-spacing: -0.05em;
   color: $primary-color;
+  font-display: swap;
 }
 
 h2 {
   font: 180% $font-head;
   letter-spacing: -0.05em;
   color: $primary-color;
+  font-display: swap;
 }
 
 p {
   font: 120% $font-body;
   color: $secondary-color;
-}
-
-li {
-  font: 120% $font-body;
-  color: $secondary-color;
+  font-display: swap;
 }
 
 //Custom classes start here
