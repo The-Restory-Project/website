@@ -29,6 +29,12 @@ p {
   font-display: swap;
 }
 
+li {
+  font: 120% $font-body;
+  color: $secondary-color;
+  font-display: swap;
+}
+
 //Custom classes start here
 
 .equal-spacing {
