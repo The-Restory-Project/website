@@ -1,3 +1,4 @@
+.env.development
 .cache
 node_modules
 public

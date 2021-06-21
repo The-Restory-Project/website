@@ -7,11 +7,12 @@ body {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
+  background-color: $background-color;
 }
 
 h1 {
   font: 280% $font-head;
-  letter-spacing: -0.05em;
+  letter-spacing: -0.03em;
   color: $primary-color;
   font-display: swap;
 }
@@ -44,8 +45,8 @@ li {
 }
 
 .padding-vertical {
-  padding-top: 2rem;
-  padding-bottom: 2rem;
+  padding-top: 1rem;
+  padding-bottom: 1rem;
 }
 
 .normal-anchor {
@@ -53,11 +54,15 @@ li {
   color: $secondary-color;
   text-decoration: underline;
   padding-right: 4rem;
+  :hover {
+    color: $primary-color;
+  }
 }
 
 .secret-anchor {
-  font: 120% $font-body;
   color: $secondary-color;
   text-decoration: none;
-  padding-right: 4rem;
+  &hover {
+    color: $primary-color;
+  }
 }

@@ -4,13 +4,13 @@ import Layout from "../components/layout";
 
 const About = () => (
   <Layout>
-  <Helmet>
-    <title>The Restory Project | About us</title>
-  </Helmet>
+    <Helmet>
+      <title>The Restory Project | About us</title>
+    </Helmet>
     <div className="container-fluid">
+      <h1>About us</h1>
       <div className="row padding-vertical">
         <div className="col-sm-6">
-          <h1>About us</h1>
           <p>
             We want to make therapy accessible and affordable in India, by using
             video, chat and telephone mediums. We offer sessions on a sliding

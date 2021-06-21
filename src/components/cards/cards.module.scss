@@ -1,0 +1,55 @@
+//Global Styles
+@import "./../../styles/_style-guides.scss";
+
+.card {
+  width: auto;
+  max-width: 30%;
+  height: auto;
+  background-color: #ffffff;
+  display: flex;
+  flex-direction: column;
+  padding: 0.8rem;
+  margin: 1rem;
+}
+
+.image {
+  width: 100%;
+  max-width: inherit;
+  min-width: 100%;
+  min-height: 40%;
+  height: auto;
+}
+
+.texth4 {
+  font: 160% $font-head;
+  font-weight: bold;
+  letter-spacing: -0.05em;
+  color: $primary-color;
+  font-display: swap;
+  padding-top: 1rem;
+  padding-left: 2rem;
+  padding-right: 2rem;
+}
+
+.textp {
+  font: 100% $font-body;
+  color: $secondary-color;
+  font-display: swap;
+  padding-top: 0rem;
+  padding-bottom: 2rem;
+  padding-left: 2rem;
+  padding-right: 2rem;
+}
+
+.textspan {
+  font: 100% $font-body;
+  color: $secondary-color;
+  font-display: swap;
+  padding: 1rem 2rem;
+  font-weight: bold;
+}
+
+.link {
+  text-decoration: none;
+  position: relative;
+}

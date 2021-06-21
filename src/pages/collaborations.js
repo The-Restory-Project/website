@@ -8,17 +8,16 @@ const Collaborations = () => (
     <title>The Restory Project | Collaborations</title>
   </Helmet>
     <div className="container-fluid">
-      <h1>Collaborations</h1>
-
+    <h1>Collaborations</h1>
       <div className="row padding-vertical">
         <div className="col-sm">
           <h2>Podcasts</h2>
-          <a
+          <p><a
             href="https://open.spotify.com/episode/61nt2GCg8w7xUsuwuz6BcN?si=EkP5CLJ6Sc2lQspzEzPCuw"
             className="secret-anchor"
           >
             'Unlearning' while learning w/ The Restory Project
-          </a>
+          </a></p>
         </div>
       </div>
 
