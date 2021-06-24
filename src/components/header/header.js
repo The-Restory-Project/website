@@ -9,7 +9,7 @@ import "./header.scss";
 const Header = ({ menuLinks, siteTitle }) => {
   const data = useStaticQuery(graphql`
     query LogoQuery {
-      file(id: { eq: "3cd2bc99-5201-5dec-a4f1-39d185c66271" }) {
+      file(name: { eq: "logo" }) {
         childImageSharp {
           fixed(height: 86, width: 86) {
             ...GatsbyImageSharpFixed
