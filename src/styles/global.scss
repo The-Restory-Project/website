@@ -52,17 +52,25 @@ li {
 .normal-anchor {
   font: 120% $font-body;
   color: $secondary-color;
-  text-decoration: underline;
+  text-decoration: underline 4px #40312366;
+  text-underline-offset: 0.2em;
+  transition: text-decoration-color 300ms;
   padding-right: 4rem;
-  :hover {
-    color: $primary-color;
-  }
+}
+.normal-anchor:hover {
+  color: $primary-color;
+  text-decoration-color: #403123dd;
 }
 
 .secret-anchor {
   color: $secondary-color;
   text-decoration: none;
-  &hover {
-    color: $primary-color;
-  }
+  text-decoration: underline 4px #40312366;
+  text-underline-offset: 0.2em;
+  transition: text-decoration-color 300ms;
+}
+
+.secret-anchor:hover {
+  color: $primary-color;
+  text-decoration-color: #403123dd;
 }

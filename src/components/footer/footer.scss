@@ -22,7 +22,12 @@ footer {
       font: $font-body;
       color: $primary-color;
       line-height: 1.4;
-      text-decoration: none;
+      text-decoration: underline 4px #40312366;
+      text-underline-offset: 0.2em;
+      transition: text-decoration-color 300ms;
+    }
+    a:hover {
+      text-decoration-color: #403123dd;
     }
   }
 }

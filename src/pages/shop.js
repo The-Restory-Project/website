@@ -29,7 +29,7 @@ export const productQuery = graphql`
             description
           }
           image {
-            fluid(resizingBehavior: FILL, maxWidth: 512, maxHeight: 512) {
+            fluid(maxWidth: 512, maxHeight: 512, resizingBehavior: FILL) {
               ...GatsbyContentfulFluid
             }
           }

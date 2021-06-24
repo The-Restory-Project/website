@@ -55,7 +55,7 @@ const Header = ({ menuLinks, siteTitle }) => {
           { name: "keywords", content: "sample, something" },
         ]}
       ></Helmet>
-      <div className="inner-header">
+      <div className="container-fluid inner-header">
         <div className="logo">
           <Link to="/">
             <Img fixed={data.file.childImageSharp.fixed} alt="Logo" />

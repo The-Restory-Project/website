@@ -11,8 +11,13 @@ const Contact = () => (
       <div className="col-md">
         <h1>Contact us</h1>
         <p>
-          <a href="mailto: therestoryproject@protonmail.com" className="secret-anchor">Email</a> or DM us
-          on Instagram
+          <a
+            href="mailto: therestoryproject@protonmail.com"
+            className="secret-anchor"
+          >
+            Email
+          </a>{" "}
+          or DM us on Instagram
         </p>
       </div>
     </div>
