@@ -4,8 +4,8 @@ import Layout from "../components/layout";
 
 const Book = () => (
   <Layout>
-  <Helmet>
-    <title>The Restory Project | Book a Session</title>
+    <Helmet>
+      <title>The Restory Project | Book a Session</title>
     </Helmet>
     <div className="container-fluid">
       <h1>Book a session</h1>
@@ -36,7 +36,7 @@ const Book = () => (
 
       <div className="row padding-vertical">
         <div className="col-sm">
-          <h1>Sahiti Gavarikar</h1>
+          <h2>Sahiti Gavarikar</h2>
           <p>
             Sahiti has graduated with an M.Sc in Counselling Psychology, and
             also has a background in Journalism and Literature. She has worked
@@ -59,7 +59,7 @@ const Book = () => (
         </div>
 
         <div className="col-sm">
-          <h1>Anvitha Vidyasankar</h1>
+          <h2>Anvitha Vidyasankar</h2>
           <p>
             Anvitha uses an eclectic approach with a feminist CBT bent. She also
             borrows from humanistic, behavioural and postmodern approaches. She

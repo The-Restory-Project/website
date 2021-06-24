@@ -20,8 +20,8 @@ module.exports = {
         link: "/",
       },
       {
-        name: "Blog",
-        link: "/blog",
+        name: "Book",
+        link: "/book",
       },
       {
         name: "Shop",
@@ -32,21 +32,20 @@ module.exports = {
         link: "/about",
       },
       {
-        name: "Book",
-        link: "/book",
+        name: "Collaborations",
+        link: "/collaborations",
       },
-
       {
         name: "Resources",
         link: "/resources",
       },
       {
-        name: "Collaborations",
-        link: "/collaborations",
-      },
-      {
         name: "Contact",
         link: "/contact",
+      },
+      {
+        name: "Blog",
+        link: "/blog",
       },
     ],
   },

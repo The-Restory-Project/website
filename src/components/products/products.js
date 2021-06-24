@@ -8,7 +8,7 @@ const CardComponent = ({ node }) => {
       <Img
         className={image}
         fluid={node.image.fluid}
-        alt="placeholder for the blog posts"
+        alt="placeholder for the products"
       />
       <h4 className={texth4}>{node.name}</h4>
       <p className={textp}>{node.description.description}</p>

@@ -14,6 +14,13 @@
   background-color: #fde5cd20;
 }
 
+.card:hover {
+  border-color: #40312344;
+  transform: translate(-1px, -1px);
+  transition: 400ms ease-in;
+  transition: 200ms ease-out;
+}
+
 .image {
   width: 100%;
   border-radius: 2px 12px;
@@ -26,12 +33,14 @@
 .texth4 {
   font: 160% $font-head;
   font-weight: bold;
-  letter-spacing: -0.05em;
+  letter-spacing: -0.01em;
   color: $primary-color;
   font-display: swap;
   padding-top: 1rem;
   padding-left: 2rem;
   padding-right: 2rem;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
 }
 
 .textp {

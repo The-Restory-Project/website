@@ -26,7 +26,7 @@ const About = () => (
 
       <div className="row padding-vertical">
         <div className="col-sm-6">
-          <h1>Why therapy</h1>
+          <h2>Why go to therapy?</h2>
           <p>
             Therapy provides a space where an individual can be listened to
             without judgement, and with empathy. Your therapist is an objective
@@ -47,7 +47,7 @@ const About = () => (
 
       <div className="row padding-vertical">
         <div className="col-sm-6">
-          <h1>How The Restory Project started</h1>
+          <h2>How did the Restory Project start?</h2>
           <p>
             Anvitha Vidyasankar and Sahiti Gavarikar met in college, while they
             were pursuing their Master’s in Counselling Psychology. They

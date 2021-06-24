@@ -24,9 +24,19 @@ header {
         padding: 2rem;
         position: absolute;
         text-transform: uppercase;
-        font: 120% $font-body;
+        font: 120% $font-head;
+        letter-spacing: 0.08em;
         font-weight: 400;
         color: $primary-color;
+        -webkit-font-smoothing: antialiased;
+        -moz-osx-font-smoothing: grayscale;
+      }
+      span:hover {
+        letter-spacing: 0.1em;
+        font-weight: 600;
+        transition: 200ms ease-in-out;
+        -webkit-font-smoothing: antialiased;
+        -moz-osx-font-smoothing: grayscale;
       }
     }
     .menu-top {
@@ -50,7 +60,7 @@ header {
             }
             a:hover {
               transform: translate(1px, -2px);
-              transition: 0.2s ease-in-out;
+              transition: 200ms ease-in-out;
             }
           }
         }
@@ -76,7 +86,7 @@ header {
         display: block;
         height: 2px;
         margin: 6px 0;
-        transition: all 0.4s ease-in-out;
+        transition: all 400ms ease-in-out;
       }
 
       .menu-icon:hover:before {
@@ -98,7 +108,7 @@ header {
 .menu-outer {
   z-index: 5;
   position: fixed;
-  width: 28%;
+  width: 25%;
   height: 100%;
   top: 0;
   left: 10;
@@ -107,7 +117,7 @@ header {
   background-color: $accent-color;
   .menu-inner {
     margin-top: 14vh;
-    margin-right: 26%;
+    margin-right: 30%;
     ul {
       display: flex;
       flex-direction: column;
@@ -126,8 +136,8 @@ header {
       a:hover {
         font-weight: 600;
         transform: translate(1px, -2px);
-        transition: 0.4s ease-in;
-        transition: 0.2s ease-out;
+        transition: 400ms ease-in;
+        transition: 200ms ease-out;
       }
     }
   }
