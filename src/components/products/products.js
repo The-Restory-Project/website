@@ -1,14 +1,6 @@
 import * as React from "react";
-import { Link } from "gatsby";
 import Img from "gatsby-image";
-import {
-  card,
-  image,
-  texth4,
-  textp,
-  button,
-  center,
-} from "./products.module.scss";
+import { card, image, texth4, textp, button } from "./products.module.scss";
 
 const CardComponent = ({ node }) => {
   return (

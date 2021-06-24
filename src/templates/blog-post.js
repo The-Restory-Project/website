@@ -4,13 +4,7 @@ import { Helmet } from "react-helmet";
 import Img from "gatsby-image";
 import Layout from "./../components/layout.js";
 
-import {
-  image,
-  textbox,
-  date,
-  heading,
-  content,
-} from "./blog-posts.module.scss";
+import { image, date, content } from "./blog-posts.module.scss";
 
 export const query = graphql`
   query ($slug: String!) {
