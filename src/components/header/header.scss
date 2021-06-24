@@ -34,9 +34,12 @@ header {
       span:hover {
         letter-spacing: 0.1em;
         font-weight: 600;
-        transition: 200ms ease-in-out;
+        -webkit-transform: translate(2px);
+        transform: translate(2px);
+        transition: 240ms ease-in;
         -webkit-font-smoothing: antialiased;
         -moz-osx-font-smoothing: grayscale;
+        will-change: transform;
       }
     }
     .menu-top {
@@ -59,8 +62,10 @@ header {
               padding: 1.2rem;
             }
             a:hover {
+              -webkit-transform: translate(1px, -2px);
               transform: translate(1px, -2px);
-              transition: 200ms ease-in-out;
+              transition: 300ms linear;
+              will-change: transform;
             }
           }
         }
@@ -86,19 +91,25 @@ header {
         display: block;
         height: 2px;
         margin: 6px 0;
-        transition: all 400ms ease-in-out;
+        transition: all 300ms linear;
       }
 
       .menu-icon:hover:before {
+        -webkit-transform: translateY(8px) rotate(135deg);
         transform: translateY(8px) rotate(135deg);
+        will-change: transform;
       }
 
       .menu-icon:hover:after {
+        -webkit-transform: translateY(-8px) rotate(-135deg);
         transform: translateY(-8px) rotate(-135deg);
+        will-change: transform;
       }
 
       .menu-icon:hover span {
+        -webkit-transform: scale(0);
         transform: scale(0);
+        will-change: transform;
       }
     }
   }
@@ -135,9 +146,10 @@ header {
       }
       a:hover {
         font-weight: 600;
+        -webkit-transform: translate(1px, -2px);
         transform: translate(1px, -2px);
-        transition: 400ms ease-in;
-        transition: 200ms ease-out;
+        transition: 300ms linear;
+        will-change: transform;
       }
     }
   }

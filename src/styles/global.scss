@@ -8,6 +8,12 @@ body {
   padding: 0;
   box-sizing: border-box;
   background-color: $background-color;
+  ::selection {
+    background: #fde5cd88; /* WebKit/Blink Browsers */
+  }
+  ::-moz-selection {
+    background: #fde5cd88; /* Gecko Browsers */
+  }
 }
 
 h1 {
