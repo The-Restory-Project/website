@@ -21,12 +21,11 @@ header {
         text-decoration: none;
       }
       span {
-        margin-left: 2rem;
-        position: fixed;
+        padding: 2rem;
+        position: absolute;
         text-transform: uppercase;
-        margin-top: 2rem;
         font: 120% $font-body;
-        font-weight: 400;
+        font-weight: 600;
         color: $primary-color;
       }
     }
@@ -47,10 +46,11 @@ header {
               text-decoration: none;
               font-weight: 400;
               display: inline-block;
-              margin: 1.2rem;
+              padding: 1.2rem;
             }
             a:hover {
-              font-weight: 600;
+              transform: translate(1px, -2px);
+              transition: 0.2s ease-in-out;
             }
           }
         }
@@ -120,11 +120,14 @@ header {
         color: $primary-color;
         text-decoration: none;
         font-weight: 400;
-        display: inline-block;
-        margin: 1.2rem;
+        display: block;
+        padding: 1.2rem;
       }
       a:hover {
         font-weight: 600;
+        transform: translate(-1px, -2px);
+        transition: 0.2s ease-in;
+        transition: 0.4s ease-out;
       }
     }
   }
