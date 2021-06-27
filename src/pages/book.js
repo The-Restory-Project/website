@@ -10,7 +10,7 @@ const Book = () => (
     <div className="container-fluid">
       <h1>Book a session</h1>
       <div classname="row padding-vertical">
-        <ol className="col-sm-4">
+        <ol className="col-md-5">
           <li>
             Read the therapist profiles, and pick a therapist you feel fits your
             requirements.
@@ -35,7 +35,7 @@ const Book = () => (
       </div>
 
       <div className="row padding-vertical">
-        <div className="col-sm">
+        <div className="col-md-6">
           <h2>Sahiti Gavarikar</h2>
           <p>
             Sahiti has graduated with an M.Sc in Counselling Psychology, and
@@ -58,7 +58,7 @@ const Book = () => (
           </p>
         </div>
 
-        <div className="col-sm">
+        <div className="col-md-6">
           <h2>Anvitha Vidyasankar</h2>
           <p>
             Anvitha uses an eclectic approach with a feminist CBT bent. She also

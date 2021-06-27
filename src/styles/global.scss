@@ -58,7 +58,7 @@ li {
 .normal-anchor {
   font: 120% $font-body;
   color: $secondary-color;
-  text-decoration: underline 4px #403123aa;
+  text-decoration: underline 2px #403123aa;
   text-underline-offset: 0.2em;
   transition: text-decoration-color 300ms;
   padding-right: 2rem;
@@ -71,7 +71,7 @@ li {
 .secret-anchor {
   color: $secondary-color;
   text-decoration: none;
-  text-decoration: underline 4px #40312366;
+  text-decoration: underline 2px #40312366;
   text-underline-offset: 0.2em;
   transition: text-decoration-color 300ms;
 }
