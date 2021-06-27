@@ -4,9 +4,9 @@ import Layout from "../components/layout";
 
 const Resources = () => (
   <Layout>
-  <Helmet>
-    <title>The Restory Project | Resources</title>
-  </Helmet>
+    <Helmet>
+      <title>The Restory Project | Resources</title>
+    </Helmet>
     <div className="container-fluid">
       <h1>Resources</h1>
       <div className="row padding-vertical">
@@ -26,10 +26,7 @@ const Resources = () => (
           <ul>
             <li>Sahaay: 1800-2000-113</li>
             <li>Swabhava: 080-22230959</li>
-            <li>
-              Sahodari Foundation (for the transgender community): +91
-              7639741916
-            </li>
+            <li>Sahodari Foundation: +91 7639741916</li>
           </ul>
         </div>
 

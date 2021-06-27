@@ -81,7 +81,10 @@ const Header = ({ menuLinks, siteTitle }) => {
 
         <div className="menu-button">
           <nav>
-            <div className="menu-icon" onClick={() => setShowMenu(!showMenu)}>
+            <div
+              className={ showMenu === true ? "menu-icon menu-icon-active" : "menu-icon" }
+              onClick={() => setShowMenu(!showMenu)}
+            >
               <span></span>
             </div>
             {menuMask}

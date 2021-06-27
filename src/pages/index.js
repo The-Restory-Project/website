@@ -7,7 +7,7 @@ const Home = () => (
       <div className="col-md">
         <h1>Changing the stories we tell about ourselves.</h1>
         <p>
-          We’re young, Indian, queer-affirmative, trauma-informed feminist
+          We’re young Indian, queer-affirmative, trauma-informed feminist
           therapists offering online therapy.
         </p>
       </div>

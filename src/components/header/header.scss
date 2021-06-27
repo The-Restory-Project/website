@@ -94,19 +94,19 @@ header {
         transition: all 300ms linear;
       }
 
-      .menu-icon:hover:before {
+      .menu-icon-active:before {
         -webkit-transform: translateY(8px) rotate(135deg);
         transform: translateY(8px) rotate(135deg);
         will-change: transform;
       }
 
-      .menu-icon:hover:after {
+      .menu-icon-active:after {
         -webkit-transform: translateY(-8px) rotate(-135deg);
         transform: translateY(-8px) rotate(-135deg);
         will-change: transform;
       }
 
-      .menu-icon:hover span {
+      .menu-icon-active span {
         -webkit-transform: scale(0);
         transform: scale(0);
         will-change: transform;
