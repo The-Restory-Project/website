@@ -25,21 +25,10 @@ header {
         position: absolute;
         text-transform: uppercase;
         font: 120% $font-head;
-        letter-spacing: 0.08em;
         font-weight: 400;
         color: $primary-color;
         -webkit-font-smoothing: antialiased;
         -moz-osx-font-smoothing: grayscale;
-      }
-      span:hover {
-        letter-spacing: 0.1em;
-        font-weight: 600;
-        -webkit-transform: translate(2px);
-        transform: translate(2px);
-        transition: 240ms ease-in;
-        -webkit-font-smoothing: antialiased;
-        -moz-osx-font-smoothing: grayscale;
-        will-change: transform;
       }
     }
     .menu-top {
@@ -66,6 +55,9 @@ header {
               transform: translate(1px, -2px);
               transition: 300ms linear;
               will-change: transform;
+            }
+            .active {
+              font-weight: 600;
             }
           }
         }
@@ -119,7 +111,7 @@ header {
 .menu-outer {
   z-index: 5;
   position: fixed;
-  width: 25%;
+  width: 16%;
   height: 100%;
   top: 0;
   left: 10;
@@ -128,14 +120,14 @@ header {
   background-color: $accent-color;
   .menu-inner {
     margin-top: 14vh;
-    margin-right: 30%;
+    margin-left: -4%;
     ul {
       display: flex;
       flex-direction: column;
     }
     li {
       list-style: none;
-      text-align: right;
+      text-align: left;
       a {
         font: 100% $font-body;
         color: $primary-color;
@@ -162,4 +154,8 @@ header {
   height: 100%;
   position: fixed;
   z-index: 3;
+}
+
+.move-shit{
+  transform: translateX(-5rem);
 }

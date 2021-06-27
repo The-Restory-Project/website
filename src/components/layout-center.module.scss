@@ -7,8 +7,8 @@
   display: grid;
   grid-template-rows: auto 1fr auto;
   .section {
-    padding-left: 12rem;
-    padding-right: 12rem;
+    margin-left: 20%;
+    margin-right: 20%;
     align-self: center;
   }
 }
