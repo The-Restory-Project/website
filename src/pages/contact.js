@@ -23,6 +23,7 @@ const Contact = () => (
     </div>
     <div className="row">
       <div className="col-md-4">
+      <p>Socials:
         <a
           href="https://www.instagram.com/the_restory_project/"
           className="normal-anchor"
@@ -44,6 +45,7 @@ const Contact = () => (
         >
           LinkedIn
         </a>
+        </p>
       </div>
     </div>
   </Layout>
