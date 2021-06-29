@@ -21,6 +21,7 @@
   min-width: 100%;
   min-height: 40%;
   height: auto;
+  max-height: 60%;
 }
 
 .texth4 {
@@ -44,6 +45,7 @@
   padding-bottom: 2rem;
   padding-left: 2rem;
   padding-right: 2rem;
+  max-height: 20%;
 }
 
 .button {
@@ -58,6 +60,7 @@
   text-decoration: none;
   font-size: 120%;
   align-self: center;
+  max-height: 10%;
 }
 
 .button:hover {
@@ -65,5 +68,5 @@
   transform: scale(1.06);
   transition: 120ms ease-in-out;
   will-change: transform;
-  font-weight:600;
+  font-weight: 600;
 }

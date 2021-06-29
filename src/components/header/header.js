@@ -63,17 +63,25 @@ const Header = ({ menuLinks, siteTitle }) => {
           </Link>
         </div>
 
-        <div className={ showMenu === true ? "menu-top move-shit" : "menu-top" }>
+        <div
+          className={showMenu === true ? "menu-top move-left__5" : "menu-top"}
+        >
           <nav>
             <ul>
               <li>
-                <Link to="/book" activeClassName="active">Book a session</Link>
+                <Link to="/book" activeClassName="active">
+                  Book a session
+                </Link>
               </li>
               <li>
-                <Link to="/shop" activeClassName="active">Shop</Link>
+                <Link to="/shop" activeClassName="active">
+                  Shop
+                </Link>
               </li>
               <li>
-                <Link to="/contact" activeClassName="active">Contact</Link>
+                <Link to="/contact" activeClassName="active">
+                  Contact
+                </Link>
               </li>
             </ul>
           </nav>
@@ -82,7 +90,11 @@ const Header = ({ menuLinks, siteTitle }) => {
         <div className="menu-button">
           <nav>
             <div
-              className={ showMenu === true ? "menu-icon menu-icon-active move-shit" : "menu-icon" }
+              className={
+                showMenu === true
+                  ? "menu-icon menu-icon-active move-left__5"
+                  : "menu-icon"
+              }
               onClick={() => setShowMenu(!showMenu)}
             >
               <span></span>
