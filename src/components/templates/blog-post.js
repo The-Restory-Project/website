@@ -4,7 +4,13 @@ import { Helmet } from "react-helmet";
 import Img from "gatsby-image";
 import Layout from "./../layouts/layout.js";
 import { renderRichText } from "gatsby-source-contentful/rich-text";
-import { image, date, content } from "./blog-posts.module.scss";
+import {
+  postContent,
+  postTitle,
+  postDate,
+  postHero,
+  postBody,
+} from "./blog-posts.module.scss";
 
 export const query = graphql`
   query ($slug: String!) {
@@ -32,26 +38,20 @@ const BlogPost = (props) => {
       <Helmet>
         <title>The Restory Blog | {props.data.contentfulBlogPosts.title}</title>
       </Helmet>
-      <div className="content-block">
-        <div>
-          <h1>{props.data.contentfulBlogPosts.title}</h1>
-          <span className={date}>
+      <div className="content-element__first">
+        <div className={postContent}>
+          <h1 className={postTitle}>{props.data.contentfulBlogPosts.title}</h1>
+          <span className={postDate}>
             Posted on {props.data.contentfulBlogPosts.publishDate} by{" "}
             {props.data.contentfulBlogPosts.author.name}
           </span>
-          <div classname="">
-            <div className="">
-              <Img
-                fluid={props.data.contentfulBlogPosts.heroImage.fluid}
-                className={image}
-              />
-            </div>
-            <div className="">
-              <div className={content}>
-                {renderRichText(props.data.contentfulBlogPosts.body)}
-              </div>
-            </div>
-          </div>
+          <Img
+            fluid={props.data.contentfulBlogPosts.heroImage.fluid}
+            className={postHero}
+          />
+          <main className={postBody}>
+            {renderRichText(props.data.contentfulBlogPosts.body)}
+          </main>
         </div>
       </div>
     </Layout>
