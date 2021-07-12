@@ -23,9 +23,12 @@ const Layout = ({ children }) => {
     <div className={container}>
       <Header
         menuLinks={data.site.siteMetadata.menuLinks}
-        siteTitle={data.site.siteMetadata?.title || `The story Project`}
+        siteTitle={
+          data.site.siteMetadata?.title ||
+          `The Restory Project | Changing the stories we tell about ourselves`
+        }
       />
-      <div className={section}>{children}</div>
+      <main className={section}>{children}</main>
       <Footer />
     </div>
   );

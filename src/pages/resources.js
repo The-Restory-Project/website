@@ -1,16 +1,17 @@
 import * as React from "react";
 import { Helmet } from "react-helmet";
-import Layout from "../components/layout";
+import Layout from "./../components/layouts/layout.js";
 
 const Resources = () => (
   <Layout>
     <Helmet>
       <title>The Restory Project | Resources</title>
     </Helmet>
-    <div className="container-fluid">
-      <h1>Resources</h1>
-      <div className="row padding-vertical">
-        <div className="col-sm">
+    <div className="content-block flex flex-wrap content-center">
+      <h1 className="sm:visible md:hidden">Resources</h1>
+      <h1 className="invisible md:visible">Resources</h1>
+      <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-x-6 gap-y-8">
+        <div className="">
           <h2>Suicide Helplines</h2>
           <ul>
             <li>1 Life: 7893078930</li>
@@ -21,7 +22,7 @@ const Resources = () => (
           </ul>
         </div>
 
-        <div className="col-sm">
+        <div className="">
           <h2>LGBT+ Resources</h2>
           <ul>
             <li>Sahaay: 1800-2000-113</li>
@@ -30,7 +31,7 @@ const Resources = () => (
           </ul>
         </div>
 
-        <div className="col-sm">
+        <div className="">
           <h2>Domestic Abuse Helplines</h2>
           <ul>
             <li>National Domestic Abuse Helpline: 1091/1291</li>

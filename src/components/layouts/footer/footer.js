@@ -6,8 +6,13 @@ const today = new Date();
 const Footer = () => (
   <footer>
     <div className="inner-footer">
-      {/* prettier-ignore */}
-      <p>Built with coffee. Copyright{" "}<a href="https://aerocreate.com/">Aero Create</a> © {today.getFullYear()}.</p>
+      <p>
+        Copyright{" "}
+        <a href="https://aerocreate.in/" className="normal-anchor">
+          Aero Create
+        </a>{" "}
+        © {today.getFullYear()}.
+      </p>
     </div>
   </footer>
 );

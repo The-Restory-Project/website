@@ -1,59 +1,55 @@
 //Importing Style Guides, to modify go-to _style-guides.scss
-@import "./../../styles/_style-guides.scss";
+@import "./../../../styles/_style-guides.scss";
 
-//Base CSS styles
+//Importing mixins, to modify breakpoints go-to mixins.scss
+@import "./../../../styles/mixins.scss";
+
 header {
-  height: 10%;
-  width: 100%;
-  .inner-header {
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    height: 6rem;
-    padding-left: 12rem;
-    padding-right: 12rem;
-    margin-bottom: 4rem;
-    .logo {
-      margin-top: 2.4em;
-      margin-left: 1em;
-      a {
-        text-decoration: none;
-      }
-      span {
-        padding: 2rem;
+  width: auto;
+  max-height: 16vh;
+  margin-left: 2rem;
+  margin-right: 2rem;
+  .header-set {
+    @apply flex justify-between;
+    .logo-set {
+      margin-top: 1rem;
+      transform: translateX(-0.6rem);
+      .logo {
+        margin-top: 0.4rem;
         position: absolute;
+      }
+      .logotype {
+        margin-top: 1.6rem;
+        margin-left: 76px;
         text-transform: uppercase;
-        font: 120% $font-head;
-        font-weight: 400;
+        font: 1.2rem $font-head;
+        letter-spacing: -0.03em;
+        font-display: swap;
         color: $primary-color;
-        -webkit-font-smoothing: antialiased;
-        -moz-osx-font-smoothing: grayscale;
+        position: absolute;
+        white-space: nowrap;
       }
     }
-    .menu-top {
-      margin-top: 3rem;
-      margin-left: 60%;
+    .nav-set {
+      margin-top: 2.6rem;
+      margin-right: 1rem;
+      display: none;
+      @apply flex-grow;
+      @include for-desktop-up {
+        display: unset;
+      }
       nav {
         ul {
-          display: flex;
-          align-items: center;
-          justify-content: space-between;
+          @apply flex justify-end;
           li {
+            padding-right: 2rem;
             list-style: none;
             text-align: right;
             a {
-              font: 100% $font-body;
-              color: $primary-color;
               text-decoration: none;
-              font-weight: 400;
               display: inline-block;
-              padding: 1.2rem;
             }
             a:hover {
-              -webkit-transform: translate(1px, -2px);
-              transform: translate(1px, -2px);
-              transition: 300ms linear;
-              will-change: transform;
             }
             .active {
               font-weight: 600;
@@ -62,21 +58,20 @@ header {
         }
       }
     }
-    //Menu button and animation
-    .menu-button {
+    .button-set {
+      @apply flex-none;
+      margin-top: 2.6rem;
+      cursor: pointer;
       .menu-icon {
-        position: absolute;
-        margin: 0rem;
-        width: 32px;
-        cursor: pointer;
+        width: 36px;
         z-index: 10;
+        position: relative;
       }
-
       .menu-icon:after,
       .menu-icon:before,
       .menu-icon span {
         border-radius: 2px;
-        background-color: $primary-color;
+        background-color: $secondary-color;
         content: "";
         display: block;
         height: 2px;
@@ -105,20 +100,26 @@ header {
   }
 }
 
-//Menu overlay
 .menu-outer {
   z-index: 5;
   position: fixed;
-  width: 16%;
+  width: 60vw;
   height: 100%;
   top: 0;
   left: 10;
   right: 0;
   bottom: 0;
   background-color: $accent-color;
+  @include for-tablet-up {
+    width: 40vw;
+  }
+  @include for-desktop-up {
+    width: 34vw;
+  }
   .menu-inner {
-    margin-top: 14vh;
-    margin-left: -4%;
+    right: 0;
+    bottom: 0;
+    margin: 4rem;
     ul {
       display: flex;
       flex-direction: column;
@@ -127,19 +128,9 @@ header {
       list-style: none;
       text-align: left;
       a {
-        font: 100% $font-body;
-        color: $primary-color;
         text-decoration: none;
-        font-weight: 400;
-        display: block;
-        padding: 1.2rem;
       }
       a:hover {
-        font-weight: 600;
-        -webkit-transform: translate(1px, -2px);
-        transform: translate(1px, -2px);
-        transition: 300ms linear;
-        will-change: transform;
       }
     }
   }
@@ -152,8 +143,4 @@ header {
   height: 100%;
   position: fixed;
   z-index: 3;
-}
-
-.move-left__5 {
-  transform: translateX(-5rem);
 }

@@ -1,9 +1,11 @@
-//Global Styles
-@import "./../styles/_style-guides.scss";
+//Importing Style Guides, to modify go-to _style-guides.scss
+@import "./../../styles/_style-guides.scss";
+
+//Importing mixins, to modify breakpoints go-to mixins.scss
+@import "./../../styles/mixins.scss";
 
 .image {
-  width: 100%;
-  max-height: 40%;
+  width: auto;
   margin-bottom: 2rem;
 }
 

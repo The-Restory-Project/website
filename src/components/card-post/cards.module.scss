@@ -1,0 +1,78 @@
+//Importing Style Guides, to modify go-to _style-guides.scss
+@import "./../../styles/_style-guides.scss";
+
+//Importing mixins, to modify breakpoints go-to mixins.scss
+@import "./../../styles/mixins.scss";
+
+.card {
+  background-color: #ffffff;
+  width: 100%;
+  height: auto;
+  margin-bottom: 2rem;
+  box-shadow: 2px 4px 8px rgb(0 0 0 / 0.2);
+  @apply grid md:flex-1;
+  @include for-tablet-up {
+    width: auto;
+    height: auto;
+  }
+}
+
+.card:hover {
+  box-shadow: 4px 8px 12px rgb(0 0 0 / 0.4);
+  transform: translate3d(1.1);
+  transition: all 300ms;
+}
+
+.imageContainer {
+}
+
+.image {
+  width: auto;
+  height: 100%;
+  @apply object-cover;
+  aspect-ratio: 16 / 9;
+  @include for-tablet-up {
+    width: 100%;
+    height: 100%;
+  }
+}
+
+.contentContainer {
+  padding: 2rem;
+}
+
+.title {
+  font: 1rem $font-head;
+  color: $primary-color;
+  margin: 0rem;
+  @include for-tablet-up {
+    font: 1.2rem $font-head;
+  }
+  @include for-desktop-up {
+    font: 1.4rem $font-head;
+  }
+}
+
+.description {
+  font: 0.8rem $font-body;
+  color: $secondary-color;
+  margin-top: 0rem;
+  margin-bottom: 2rem;
+
+  @include for-tablet-up {
+    font: 1rem $font-body;
+  }
+}
+
+.author {
+  font: 1.2rem $font-head;
+}
+
+.button {
+  font: 1.2rem $font-body;
+  background-color: $primary-color;
+  text-decoration: none;
+  color: #ffffff;
+  padding: 0.6rem 1rem;
+  margin-top: 1rem;
+}
