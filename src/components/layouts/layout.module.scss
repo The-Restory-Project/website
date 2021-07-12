@@ -9,6 +9,7 @@
   max-width: 100%;
   display: grid;
   grid-template-rows: auto 1fr auto;
+  background-image: url(/images/background.svg);
   @include for-tablet-up {
     max-width: 80%;
     margin-left: 10%;
@@ -23,4 +24,14 @@
     margin-left: 2rem;
     margin-right: 2rem;
   }
+}
+
+.backgroundImage {
+  width: 50%;
+  opacity: 0.4;
+  height: auto;
+  max-height: 100%;
+  bottom: 0;
+  right: 10vw;
+  position: fixed;
 }

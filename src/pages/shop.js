@@ -12,8 +12,8 @@ const Shop = ({ data }) => (
 
     <div className="container">
       <div className="content-element__first">
-        <h1>Shop our products</h1>
-        <Products posts={data.allContentfulProduct.edges} />
+        <h1>Coming Soon!</h1>
+        {/*<Products posts={data.allContentfulProduct.edges} />*/}
       </div>
     </div>
   </Layout>

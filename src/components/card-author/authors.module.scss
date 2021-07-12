@@ -42,25 +42,22 @@
 }
 
 .title {
-  font: 1rem $font-head;
+  font: 1.4rem $font-head;
   color: $primary-color;
   margin: 0rem;
   @include for-tablet-up {
-    font: 1.2rem $font-head;
-  }
-  @include for-desktop-up {
-    font: 1.4rem $font-head;
+    font: 1.6rem $font-head;
   }
 }
 
 .description {
-  font: 0.8rem $font-body;
+  font: 1rem $font-body;
   color: $secondary-color;
   margin-top: 0rem;
   margin-bottom: 2rem;
 
   @include for-tablet-up {
-    font: 1rem $font-body;
+    line-height: 1.6rem;
   }
 }
 

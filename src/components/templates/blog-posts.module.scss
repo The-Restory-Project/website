@@ -4,31 +4,32 @@
 //Importing mixins, to modify breakpoints go-to mixins.scss
 @import "./../../styles/mixins.scss";
 
-.image {
-  width: auto;
-  margin-bottom: 2rem;
-}
-
-.textbox {
-  width: auto;
-  max-width: 60%;
-  margin-top: 2rem;
-  margin-left: 6rem;
-}
-
-.date {
-  font: 100% $font-body;
-  color: $secondary-color;
-  font-display: swap;
-  margin-top: 0rem;
-  margin-bottom: 2rem;
-  margin-left: 1rem;
-  display: block;
-}
-
-.content {
-  width: auto;
-  max-width: 60%;
-  margin-left: 10%;
-  margin-right: 10%;
+.postContent {
+  .postTitle {
+  }
+  .postDate {
+    font: 1rem $font-body;
+    color: $secondary-color;
+    font-display: swap;
+    margin-top: 0rem;
+    margin-bottom: 2rem;
+    display: inline-block;
+  }
+  .postHero {
+    width: auto;
+    margin-bottom: 2rem;
+  }
+  .postBody {
+    width: auto;
+    @include for-tablet-up {
+      width: 60%;
+      margin-left: 10%;
+      margin-right: 10%;
+    }
+    *,
+    *:before,
+    *:after {
+      margin-bottom: 2rem;
+    }
+  }
 }
