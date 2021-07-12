@@ -51,25 +51,16 @@ module.exports = {
   },
   plugins: [
     {
-      resolve: `gatsby-plugin-google-analytics`,
+      resolve: `gatsby-plugin-google-gtag`,
       options: {
-        // The property ID; the tracking code won't be generated without it
-        trackingId: "G-C6W37XKKMF",
-        // Defines where to place the tracking script - `true` in the head and `false` in the body
-        head: true,
-        // Setting this parameter is also optional
-        respectDNT: true,
-
-        // Delays sending pageview hits on route update (in milliseconds)
-        pageTransitionDelay: 0,
-
-        enableWebVitalsTracking: true,
-        // Defers execution of google analytics script after page load
-        defer: false,
-        // Any additional optional fields
-        sampleRate: 5,
-        siteSpeedSampleRate: 10,
-        cookieDomain: "example.com",
+        // You can add multiple tracking ids and a pageview event will be fired for all of them.
+        trackingIds: [
+          "G-C6W37XKKMF", // Google Analytics / GA
+        ],
+        pluginConfig: {
+          head: false,
+          //respectDNT: true,
+        },
       },
     },
     {
@@ -94,7 +85,15 @@ module.exports = {
         display: "swap",
       },
     },
-    `gatsby-plugin-sass`,
+    {
+      resolve: `gatsby-plugin-sass`,
+      options: {
+        postCssPlugins: [
+          require("tailwindcss"),
+          require("./tailwind.config.js"),
+        ],
+      },
+    },
     `gatsby-plugin-react-helmet`,
     `gatsby-plugin-sitemap`,
     `gatsby-plugin-sharp`,

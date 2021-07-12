@@ -1,0 +1,39 @@
+//Importing Style Guides, to modify go-to _style-guides.scss
+@import "./../../../styles/_style-guides.scss";
+
+//Importing mixins, to modify breakpoints go-to mixins.scss
+@import "./../../../styles/mixins.scss";
+
+footer {
+  width: inherit;
+  margin-left: 2rem;
+  margin-right: 2rem;
+  min-height: 4vh;
+  .inner-footer {
+    display: flex;
+    justify-content: center;
+    padding-bottom: 0.6rem;
+    p {
+      font: 0.8rem $font-body;
+      color: $secondary-color;
+      line-height: 1.4;
+      @include for-tablet-up {
+        font: 1rem $font-body;
+      }
+      a {
+        font: 0.8rem $font-body;
+        color: $primary-color;
+        line-height: 1.4;
+        text-decoration: underline 2px #40312366;
+        text-underline-offset: 0.2em;
+        transition: text-decoration-color 300ms;
+        @include for-tablet-up {
+          font: 1rem $font-body;
+        }
+      }
+      a:hover {
+        text-decoration-color: #403123dd;
+      }
+    }
+  }
+}

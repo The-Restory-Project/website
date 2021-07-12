@@ -1,24 +1,12 @@
 import * as React from "react";
-import Img from "gatsby-image";
 import { Helmet } from "react-helmet";
 import { Link } from "gatsby";
 import { useState } from "react";
-import { useStaticQuery, graphql } from "gatsby";
+import { StaticImage } from "gatsby-plugin-image";
+
 import "./header.scss";
 
 const Header = ({ menuLinks, siteTitle }) => {
-  const data = useStaticQuery(graphql`
-    query LogoQuery {
-      file(name: { eq: "logo" }) {
-        childImageSharp {
-          fixed(height: 86, width: 86) {
-            ...GatsbyImageSharpFixed
-          }
-        }
-      }
-    }
-  `);
-
   const [showMenu, setShowMenu] = useState(false);
 
   let menu;
@@ -55,17 +43,26 @@ const Header = ({ menuLinks, siteTitle }) => {
           { name: "keywords", content: "sample, something" },
         ]}
       ></Helmet>
-      <div className="container-fluid inner-header">
-        <div className="logo">
+
+      <div className="header-set">
+        <div className="logo-set">
           <Link to="/">
-            <Img fixed={data.file.childImageSharp.fixed} alt="Logo" />
-            <span>The Restory Project</span>
+            <StaticImage
+              className="logo"
+              src="./../../../images/logo.png"
+              alt="The Restory Project"
+              placeholder="tracedSVG"
+              layout="fixed"
+              width={64}
+              height={64}
+            />
+            <span className="logotype invisible md:visible">
+              The Restory Project
+            </span>
           </Link>
         </div>
 
-        <div
-          className={showMenu === true ? "menu-top move-left__5" : "menu-top"}
-        >
+        <div className="nav-set">
           <nav>
             <ul>
               <li>
@@ -87,21 +84,17 @@ const Header = ({ menuLinks, siteTitle }) => {
           </nav>
         </div>
 
-        <div className="menu-button">
-          <nav>
-            <div
-              className={
-                showMenu === true
-                  ? "menu-icon menu-icon-active move-left__5"
-                  : "menu-icon"
-              }
-              onClick={() => setShowMenu(!showMenu)}
-            >
-              <span></span>
-            </div>
-            {menuMask}
-            {menu}
-          </nav>
+        <div className="button-set">
+          <div
+            className={
+              showMenu === true ? "menu-icon menu-icon-active" : "menu-icon"
+            }
+            onClick={() => setShowMenu(!showMenu)}
+          >
+            <span></span>
+          </div>
+          {menuMask}
+          {menu}
         </div>
       </div>
     </header>

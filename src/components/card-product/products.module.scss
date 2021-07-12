@@ -1,0 +1,46 @@
+//Importing Style Guides, to modify go-to _style-guides.scss
+@import "./../../styles/_style-guides.scss";
+
+//Importing mixins, to modify breakpoints go-to mixins.scss
+@import "./../../styles/mixins.scss";
+
+.card {
+  background-color: #ffffff;
+  width: 100%;
+  height: auto;
+  box-shadow: 2px 4px 8px rgb(0 0 0 / 0.2);
+
+  .imageContainer {
+    .image {
+      width: 100%;
+      height: auto;
+    }
+  }
+
+  .textContainer {
+    margin: 2rem;
+    margin-bottom: 0;
+    .name {
+      font: 1.4rem $font-head;
+      letter-spacing: -0.05em;
+      padding-bottom: 1.2rem;
+      font-display: swap;
+    }
+
+    .description {
+      font: 1rem $font-body;
+      font-display: swap;
+      color: $secondary-color;
+    }
+
+    .buy {
+      font: 1.2rem $font-head;
+      letter-spacing: -0.08em;
+      font-display: swap;
+      color: #ffffff;
+      background-color: $primary-color;
+      padding: 0.6rem 1.4rem;
+      margin: 2rem 0;
+    }
+  }
+}

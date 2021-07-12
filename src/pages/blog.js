@@ -1,8 +1,8 @@
 import * as React from "react";
-import Cards from "./../components/cards/cards.js";
 import { Helmet } from "react-helmet";
 import { graphql } from "gatsby";
-import Layout from "../components/layout";
+import Cards from "./../components/card-post/cards.js";
+import Layout from "./../components/layouts/layout.js";
 
 const Blog = ({ data }) => {
   return (
@@ -10,9 +10,12 @@ const Blog = ({ data }) => {
       <Helmet>
         <title>The Restory Project | Blog Posts</title>
       </Helmet>
-      <div className="container-fluid">
-        <h1>Blog Posts</h1>
-        <Cards posts={data.allContentfulBlogPost.edges} />
+
+      <div className="container">
+        <div className="content-element__first">
+          <h1>Blog Posts</h1>
+          <Cards posts={data.allContentfulBlogPosts.edges} />
+        </div>
       </div>
     </Layout>
   );
@@ -22,11 +25,10 @@ export default Blog;
 
 export const blogQuery = graphql`
   query blogQuery {
-    allContentfulBlogPost(sort: { fields: publishDate, order: DESC }) {
+    allContentfulBlogPosts(sort: { fields: publishDate, order: DESC }) {
       edges {
         node {
           title
-          id
           slug
           publishDate(formatString: "Do MMMM, YYYY")
           heroImage {
@@ -35,9 +37,7 @@ export const blogQuery = graphql`
             }
           }
           description {
-            childMarkdownRemark {
-              excerpt(pruneLength: 120)
-            }
+            description
           }
           author {
             name
