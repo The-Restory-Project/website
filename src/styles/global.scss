@@ -1,12 +1,21 @@
+//Importing tailwind Utilities
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
 //Importing Style Guides, to modify go-to _style-guides.scss
 @import "./_style-guides.scss";
 
-//Base CSS starts here
+//Importing mixins, to modify breakpoints go-to mixins.scss
+@import "./mixins.scss";
+
+//Base CSS Reset
 html,
 body {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
+  scroll-behavior: smooth;
   background-color: $background-color;
   ::selection {
     background: #fde5cd88; /* WebKit/Blink Browsers */
@@ -16,67 +25,112 @@ body {
   }
 }
 
+*,
+*:before,
+*:after {
+  box-sizing: inherit;
+}
+
+// Typography Styling
 h1 {
-  font: 280% $font-head;
+  font: 1.8rem $font-head;
   letter-spacing: -0.03em;
-  color: $primary-color;
   font-display: swap;
+  color: $primary-color;
+  @include for-tablet-up {
+    font: 2rem $font-head;
+  }
 }
 
 h2 {
-  font: 180% $font-head;
+  font: 1.4rem $font-head;
   letter-spacing: -0.05em;
-  color: $primary-color;
   font-display: swap;
+  color: $primary-color;
+  @include for-tablet-up {
+    font: 1.6rem $font-head;
+  }
+}
+
+h3 {
+  font: 1.4rem $font-head;
+  letter-spacing: -0.08em;
+  padding-bottom: 1.2rem;
+  font-display: swap;
+  color: $primary-color;
+  @include for-tablet-up {
+    font: 1.6rem $font-head;
+  }
 }
 
 p {
-  font: 120% $font-body;
-  color: $secondary-color;
+  font: 1rem $font-body;
   font-display: swap;
+  color: $secondary-color;
+  @include for-tablet-up {
+    font: 1.2rem $font-body;
+  }
+}
+
+a {
+  font: 1rem $font-body;
+  font-display: swap;
+  color: $primary-color;
+  @include for-tablet-up {
+    font: 1.2rem $font-body;
+  }
 }
 
 li {
-  font: 120% $font-body;
-  color: $secondary-color;
+  font: 1rem $font-body;
+  letter-spacing: -0.03em;
   font-display: swap;
+  color: $secondary-color;
+  @include for-tablet-up {
+    font: 1.2rem $font-body;
+  }
 }
 
 //Custom classes start here
 
-.equal-spacing {
+//Center align content vertically
+.content-block {
+  min-height: 80vh;
+  width: auto;
   display: flex;
-  align-items: space-between;
-  justify-content: flex-end;
+  flex-direction: row;
+  align-items: center;
 }
 
-.padding-vertical {
-  padding-top: 1rem;
-  padding-bottom: 1rem;
+.content-element {
+  margin-top: 4rem;
+  margin-bottom: 4rem;
+}
+
+.content-element__first {
+  margin-top: 4rem;
+  margin-bottom: 4rem;
+}
+
+.content-element__last {
+  margin-top: 4rem;
+  margin-bottom: 8rem;
 }
 
 .normal-anchor {
-  font: 100% $font-body;
+  font: 1.2rem $font-body;
   color: $secondary-color;
   text-decoration: underline 2px #403123aa;
   text-underline-offset: 0.2em;
   transition: text-decoration-color 300ms;
-  padding-right: 2rem;
 }
 .normal-anchor:hover {
   color: $primary-color;
   text-decoration-color: #403123ff;
 }
 
-.secret-anchor {
-  color: $secondary-color;
-  text-decoration: none;
-  text-decoration: underline 2px #40312366;
-  text-underline-offset: 0.2em;
-  transition: text-decoration-color 300ms;
-}
-
-.secret-anchor:hover {
-  color: $primary-color;
-  text-decoration-color: #403123dd;
+.normal-icons {
+  margin: 4px;
+  width: 32px;
+  height: 32px;
 }

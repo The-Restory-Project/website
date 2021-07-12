@@ -1,17 +1,20 @@
 import * as React from "react";
-import Products from "./../components/products/products.js";
 import { Helmet } from "react-helmet";
 import { graphql } from "gatsby";
-import Layout from "../components/layout";
+import Products from "./../components/card-product/products.js";
+import Layout from "./../components/layouts/layout.js";
 
 const Shop = ({ data }) => (
   <Layout>
     <Helmet>
       <title>The Restory Project | Shop</title>
     </Helmet>
-    <div className="container-fluid">
-      <h1>Shop our products</h1>
-      <Products posts={data.allContentfulProduct.edges} />
+
+    <div className="container">
+      <div className="content-element__first">
+        <h1>Shop our products</h1>
+        <Products posts={data.allContentfulProduct.edges} />
+      </div>
     </div>
   </Layout>
 );
@@ -19,8 +22,8 @@ const Shop = ({ data }) => (
 export default Shop;
 
 export const productQuery = graphql`
-  query MyQuery {
-    allContentfulProduct(sort: { fields: contentful_id, order: ASC }) {
+  query shopQuery {
+    allContentfulProduct(sort: { fields: id, order: DESC }) {
       edges {
         node {
           id
@@ -28,11 +31,13 @@ export const productQuery = graphql`
           description {
             description
           }
-          image {
+          slug
+          heroImage {
             fluid(maxWidth: 512, maxHeight: 512, resizingBehavior: FILL) {
               ...GatsbyContentfulFluid
             }
           }
+          price
         }
       }
     }

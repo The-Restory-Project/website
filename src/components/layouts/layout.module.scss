@@ -1,0 +1,26 @@
+//Importing Style Guides, to modify go-to _style-guides.scss
+@import "./../../styles/_style-guides.scss";
+
+//Importing mixins, to modify breakpoints go-to mixins.scss
+@import "./../../styles/mixins.scss";
+
+.container {
+  min-height: 100vh;
+  max-width: 100%;
+  display: grid;
+  grid-template-rows: auto 1fr auto;
+  @include for-tablet-up {
+    max-width: 80%;
+    margin-left: 10%;
+    margin-right: 10%;
+  }
+  @include for-desktop-up {
+    max-width: 60%;
+    margin-left: 20%;
+    margin-right: 20%;
+  }
+  .section {
+    margin-left: 2rem;
+    margin-right: 2rem;
+  }
+}
