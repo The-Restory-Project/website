@@ -10,9 +10,16 @@ const Shop = ({ data }) => (
       <title>The Restory Project | Shop</title>
     </Helmet>
 
-    <div className="container">
-      <div className="content-element__first">
-        <h1>Coming Soon!</h1>
+    <div className="content-block flex flex-wrap content-center">
+      <div className="container">
+        <h1>
+          Just hold on,
+          <br />
+          We're coming soon!
+        </h1>
+        <p>
+          You will find products here to help you have a better day, everyday.
+        </p>
         {/*<Products posts={data.allContentfulProduct.edges} />*/}
       </div>
     </div>

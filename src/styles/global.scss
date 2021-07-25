@@ -91,6 +91,37 @@ li {
   }
 }
 
+blockquote {
+  font: 1rem $font-body;
+  font-display: swap;
+  color: $primary-color;
+  margin: 2rem 0;
+  padding: 3rem 2rem 2rem 1rem;
+  width: 100%;
+  position: relative;
+  background: $accent-color;
+  border-left: 0.5rem solid $primary-color;
+  @include for-tablet-up {
+    width: 60%;
+    padding: 2rem 4rem;
+    font: 1.2rem $font-body;
+  }
+}
+
+blockquote::before {
+  font-family: Arial;
+  content: "\201C";
+  color: $primary-color;
+  font-size: 4em;
+  position: absolute;
+  left: 10px;
+  top: -5px;
+}
+
+blockquote::after {
+  content: "";
+}
+
 //Custom classes start here
 
 //Center align content vertically

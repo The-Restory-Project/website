@@ -1,0 +1,14 @@
+//Importing Style Guides, to modify go-to _style-guides.scss
+@import "./../../styles/_style-guides.scss";
+
+//Importing mixins, to modify breakpoints go-to mixins.scss
+@import "./../../styles/mixins.scss";
+
+.button {
+  font: 1.2rem $font-body;
+  background-color: $primary-color;
+  text-decoration: none;
+  color: #ffffff;
+  padding: 0.6rem 1rem;
+  margin-top: 1rem;
+}

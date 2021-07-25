@@ -11,6 +11,12 @@ const Collaborations = () => (
     <div className="content-block flex flex-wrap content-center">
       <div>
         <h1>Collaborations</h1>
+        <blockquote>
+          If you are a Corporate or an Organization, contact us to help you in
+          creating a healthier work environment through - Workshops, Webinars,
+          Support Groups, and Workplace Counselling.
+        </blockquote>
+
         <div className="mb-4">
           <h2>Podcasts</h2>
           <p>

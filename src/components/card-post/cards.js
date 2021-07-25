@@ -9,8 +9,8 @@ import {
   title,
   description,
   author,
-  button,
 } from "./cards.module.scss";
+import Button from "../button/button.js";
 
 const CardComponent = ({ node }) => {
   return (
@@ -26,9 +26,7 @@ const CardComponent = ({ node }) => {
         <h4 className={title}>{node.title}</h4>
         <span className={author}>By {node.author.name}</span>
         <p className={description}>{node.description.description}</p>
-        <Link to={node.slug} className={button}>
-          Read more
-        </Link>
+        <Button link={node.slug} text="Read more" />
       </div>
     </div>
   );
