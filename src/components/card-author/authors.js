@@ -1,5 +1,4 @@
 import * as React from "react";
-import { Link } from "gatsby";
 import { renderRichText } from "gatsby-source-contentful/rich-text";
 import Img from "gatsby-image";
 import {
@@ -11,7 +10,6 @@ import {
   about,
   email,
 } from "./authors.module.scss";
-import Button from "../button/button.js";
 
 const CardComponent = ({ node }) => {
   return (

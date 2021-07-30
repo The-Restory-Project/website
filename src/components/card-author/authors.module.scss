@@ -28,7 +28,7 @@
   width: auto;
   height: 100%;
   @apply object-cover;
-  aspect-ratio: 16 / 9;
+  aspect-ratio: 1 / 1;
   @include for-tablet-up {
     width: 100%;
     height: 100%;

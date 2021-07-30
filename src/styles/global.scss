@@ -165,3 +165,20 @@ blockquote::after {
   width: 32px;
   height: 32px;
 }
+
+.hero-image {
+  width: 80%;
+  min-width: 40vw;
+  height: auto;
+  @include for-desktop-up {
+    min-width: 20vw;
+    width: 25vw;
+  }
+}
+
+.image-parent {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
