@@ -16,7 +16,18 @@ body {
   padding: 0;
   box-sizing: border-box;
   scroll-behavior: smooth;
-  background-color: $background-color;
+  background: url(./bg-mobile.png) no-repeat fixed bottom;
+  -webkit-background-size: 100% 100%;
+  -moz-background-size: cover;
+  -o-background-size: 100% 100%;
+  background-size: 100% 100%;
+  @include for-tablet-up {
+    background-image: url(./bg-tablet.png);
+  }
+  @include for-desktop-up {
+    background-image: url(./bg-desktop.png);
+  }
+
   ::selection {
     background: #fde5cd88; /* WebKit/Blink Browsers */
   }
@@ -167,12 +178,26 @@ blockquote::after {
 }
 
 .hero-image {
+  width: 260px;
+  height: auto;
+  @include for-tablet-up {
+    width: 460px;
+    height: auto;
+  }
+  @include for-desktop-up {
+    width: 512px;
+    height: auto;
+  }
+}
+
+.hero-image2 {
   width: 80%;
   min-width: 40vw;
   height: auto;
   @include for-desktop-up {
     min-width: 20vw;
-    width: 25vw;
+    width: auto;
+    min-height: 50vh;
   }
 }
 
@@ -181,4 +206,6 @@ blockquote::after {
   flex-direction: column;
   justify-content: center;
   align-items: center;
+  margin: 0;
+  padding: 0;
 }
