@@ -53,11 +53,7 @@ export const therapistQuery = graphql`
         node {
           id
           name
-          emailId
           description {
-            raw
-          }
-          sendEmail {
             raw
           }
           profilePicture {

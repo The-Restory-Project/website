@@ -26,7 +26,14 @@ const CardComponent = ({ node }) => {
         <div>
           <main className={about}>{renderRichText(node.description)}</main>
         </div>
-        <p className={email}>Email me: {renderRichText(node.sendEmail)}</p>
+        <p className={email}>
+          <a
+            href="mailto: therestoryproject@protonmail.com"
+            className="normal-anchor"
+          >
+            Email Me
+          </a>
+        </p>
       </div>
     </div>
   );

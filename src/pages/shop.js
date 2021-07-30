@@ -17,9 +17,6 @@ const Shop = ({ data }) => (
           <br />
           We're coming soon!
         </h1>
-        <p>
-          You will find products here to help you have a better day, everyday.
-        </p>
         {/*<Products posts={data.allContentfulProduct.edges} />*/}
       </div>
     </div>
