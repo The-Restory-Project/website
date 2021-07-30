@@ -12,7 +12,7 @@ const Book = ({ data }) => (
 
     <div classname="container">
       <div className="content-element__first md:w-1/2">
-        <h1>Book a session</h1>
+        <h1>How to book a session</h1>
         <ol className="">
           <li>
             Read the therapist profiles, and pick a therapist you feel fits your
@@ -48,12 +48,17 @@ export default Book;
 
 export const therapistQuery = graphql`
   query therapistQuery {
-    allContentfulProfile(sort: { fields: id, order: ASC }) {
+    allContentfulProfile(sort: { fields: id, order: DESC }) {
       edges {
         node {
+          id
           name
+          emailId
           description {
-            description
+            raw
+          }
+          sendEmail {
+            raw
           }
           profilePicture {
             fluid(maxWidth: 512, resizingBehavior: FILL) {
