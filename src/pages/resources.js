@@ -8,7 +8,7 @@ const Resources = () => (
       <title>The Restory Project | Resources</title>
     </Helmet>
     <div className="content-element__first">
-      <h1>Resources</h1>
+      <h1 className="pb-4">Resources</h1>
       <div className=" flex flex-wrap content-center">
         <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-x-6 gap-y-8">
           <div className="">
