@@ -26,7 +26,7 @@ function Home() {
             <br className="visible md:hidden" /> we tell about ourselves.
           </h1>
           <p>
-            We are young Indian, queer-affirmative, trauma-informed feminist
+            We are young indian, queer-affirmative, trauma-informed, feminist
             therapists offering online therapy.
           </p>
           <div className="pt-8">
